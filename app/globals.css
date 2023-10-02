@@ -18,10 +18,21 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .page-padding {
+    @apply px-5 py-4 md:px-8 md:py-6 lg:px-12
+  }
+
+  .btn {
+    @apply border-2 border-slate-400 p-2 font-bold rounded-xl transition-all hover:shadow-lg hover:shadow-slate-600
+  }
+
+  .active {
+    @apply ring-2 ring-slate-300
+  }
 }
